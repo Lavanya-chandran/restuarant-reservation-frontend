@@ -1,0 +1,52 @@
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+//import "./App.css";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import Nav from "./Components/Nav/Nav";
+import Footer from "./components/Footer/Footer";
+import Hero from "./components/Hero/Hero";
+import Reserve from "./components/Reserve/Reserve";
+import Booking from "./components/Booking/Booking";
+import Signup from "./Components/Signup/Signup";
+import PrivateRoute from "./components/PrivateRoute";
+import { useState } from "react";
+import Feedback from './Feedback/Feedback';
+
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  return (
+    <div>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/reserve"
+            element={<Reserve isLoggedIn={isLoggedIn} />}
+          />
+          <Route
+            path="/signup"
+            element={
+              <Signup isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            }
+          />
+          <Route
+            path="/booking"
+            element={
+              <PrivateRoute isLoggedIn={isLoggedIn}>
+                <Booking />
+                </PrivateRoute>
+              }/>
+                <Route path="/feedback" element={<Feedback/>}/>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;

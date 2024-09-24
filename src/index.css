@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hero {
+  height: 45rem;
+}
+
+.hero img {
+  -webkit-filter: brightness(0.5);
+  -moz-filter: brightness(0.5);
+  -o-filter: brightness(0.5);
+  -ms-filter: brightness(0.5);
+  filter: brightness(0.5);
+}
+
+.lowbrightness {
+  -webkit-filter: brightness(0.5);
+  -moz-filter: brightness(0.5);
+  -o-filter: brightness(0.5);
+  -ms-filter: brightness(0.5);
+  filter: brightness(0.5);
+}
+.lowbrightness2 {
+  -webkit-filter: brightness(0.3);
+  -moz-filter: brightness(0.3);
+  -o-filter: brightness(0.3);
+  -ms-filter: brightness(0.3);
+  filter: brightness(0.3);
+}
+
+.heromid {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.reservebtn {
+  border: 1px solid #fff;
+  padding: 2px 80px;
+  transition: all 0.3s ease-in-out;
+}
+
+.reservebtn:hover {
+  border-color: aqua;
+  color: aqua;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.hero {
+  min-height: 50rem;
+}
+
+.reservenowbtn {
+  border: 1px solid #fff;
+  padding: 2px 80px;
+  transition: all 0.3s ease-in-out;
+}
+
+.reservenowbtn:hover {
+  border-color: aqua;
+  color: aqua;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.centered {
+  transform: translateY(50%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.show-history {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.forminput {
+  outline: none !important;
+  background-color: transparent;
+  color: aqua;
+  transition: all 0.2s ease-in-out;
+}
+
+.forminput:focus {
+  border-color: aqua;
+  scale: 1.05;
+}
+
+.item-enhance {
+  border-color: aqua;
+}
+
+.card-effect {
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.15);
+}
+
+.card-effect:hover {
+  transform: scale(1.07);
+  z-index: 2;
+  box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.3);
+}
+
+.star-position {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.customDatePickerWidth,
+.customDatePickerWidth > div.react-datepicker-wrapper,
+.customDatePickerWidth
+  > div
+  > div.react-datepicker__input-container
+  .customDatePickerWidth
+  > div
+  > div.react-datepicker__input-container
+  input {
+  width: 100%;
+}
+
+.disable-time-arrow {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
