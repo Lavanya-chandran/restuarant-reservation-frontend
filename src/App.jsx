@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Reserve from "./components/Reserve/Reserve";
 import Booking from "./components/Booking/Booking";
-import Signup from "./Components/Signup/Signup";
+import Signup from "./components/Signup/Signup"
 import PrivateRoute from "./components/PrivateRoute";
 import { useState } from "react";
 import Feedback from './Feedback/Feedback';
