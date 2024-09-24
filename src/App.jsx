@@ -12,7 +12,6 @@ import Signup from "./Components/Signup/Signup";
 import PrivateRoute from "./components/PrivateRoute";
 import { useState } from "react";
 import Feedback from './Feedback/Feedback';
-import { Navbar } from '@material-tailwind/react';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
