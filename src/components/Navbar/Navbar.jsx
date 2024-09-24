@@ -3,7 +3,7 @@ import logoGif from "../logo/nav.gif";
 import "../../App.css";
 import { FaRegCircleUser } from "react-icons/fa6";
 
-function Nav() {
+function Navbar() {
   return (
     <nav className="mx-5 md:mx-14 border-b-2 bg-transparent text-slate-100 border-gray-300 dark:bg-transparent">
       <div className="flex flex-wrap items-center justify-between p-2">
@@ -62,4 +62,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default Navbar;

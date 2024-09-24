@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 //import "./App.css";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-import Nav from "./Components/Nav/Nav";
+import Navbar from './components/Navbar/Navbar';
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Reserve from "./components/Reserve/Reserve";
@@ -12,6 +12,7 @@ import Signup from "./Components/Signup/Signup";
 import PrivateRoute from "./components/PrivateRoute";
 import { useState } from "react";
 import Feedback from './Feedback/Feedback';
+import { Navbar } from '@material-tailwind/react';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -19,7 +20,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Nav />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<About />} />
