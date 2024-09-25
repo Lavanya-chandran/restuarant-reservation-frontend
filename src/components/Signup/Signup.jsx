@@ -1,7 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+
+
+
 
 function Signup({ isLoggedIn, setIsLoggedIn }) {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -25,8 +30,10 @@ function Signup({ isLoggedIn, setIsLoggedIn }) {
       .then((res) => {
         if (res.status === 200) {
           alert("Record added successfully");
+          navigate("/reserve")
+        }
           // setIsLoggedIn(true);
-        } else {
+        else {
           Promise.reject();
         }
       })
@@ -109,21 +116,18 @@ function Signup({ isLoggedIn, setIsLoggedIn }) {
                 </label>
               </div>
             </div> */}
-
-            <button
-              // onClick={handleClick}
-              type="submit"
-              className="reservebtn text-lg ml-0 mr-0 text-white font-medium rounded-lg px-5 py-2.5 mt-6 md:ml-12"
-            >
-              Create Account
+            
+            <button type="submit" className="reservebtn text-lg text-white font-medium rounded-lg px-5 py-2.5 mt-10 md:mt-4 mb-20 md:mb-8">
+              Log In
             </button>
-            {/* <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+
+        {/* <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                       Already have an account? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</a>
                   </p> */}
-          </form>
-        </div>
-      </div>
+      </form>
     </div>
+      </div >
+    </div >
   );
 }
 

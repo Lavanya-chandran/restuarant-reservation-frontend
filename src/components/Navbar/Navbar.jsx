@@ -51,7 +51,7 @@ function Navbar() {
             Contact
           </Link>
           <Link
-            to="/contact"
+            to="/dashboard"
             className=" py-2 px-3 text-md rounded bg-transparent md:bg-transparent"
           >
           <FaRegCircleUser />

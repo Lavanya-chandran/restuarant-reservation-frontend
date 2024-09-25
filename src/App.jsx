@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 //import "./App.css";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
@@ -10,8 +10,8 @@ import Reserve from "./components/Reserve/Reserve";
 import Booking from "./components/Booking/Booking";
 import Signup from "./components/Signup/Signup"
 import PrivateRoute from "./components/PrivateRoute";
+import Dashboard from './Dashboard/Dashboard';
 import { useState } from "react";
-import Feedback from './Feedback/Feedback';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -41,7 +41,7 @@ function App() {
                 <Booking />
                 </PrivateRoute>
               }/>
-                <Route path="/feedback" element={<Feedback/>}/>
+                {/*<Route path="/dashboard" element={<Dashboard/>}/>*/}
         </Routes>
         <Footer />
       </BrowserRouter>

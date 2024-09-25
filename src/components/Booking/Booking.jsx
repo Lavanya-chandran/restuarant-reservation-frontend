@@ -1,12 +1,12 @@
 import React, { useState} from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-// import loadingGif from "../../logo/loading.gif";
+import axios from "axios";
 import { useLocation,Link } from "react-router-dom";
 
 function Booking() {
   const location = useLocation();
-  const { image, Resname, description, rating, Reslocation, price } =
+  const { image, Resname, description, rating, Reslocation, price,menu } =
     location.state;
 
   const [selectedDate, setSelectedDate] = useState(null);
@@ -14,6 +14,23 @@ function Booking() {
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios
+      .post("https://restuarant-reservation-backend-z4g6.onrender.com/reserve/create")
+      .then((res) => {
+        if (res.status === 200) {
+          toast.success("Reservation successfully");
+          navigate("/reserve")
+        }
+    
+        else {
+          Promise.reject();
+        }
+      })
+      .catch((err) => alert(err));
+  };
+
 
   return (
     <div>
@@ -61,6 +78,9 @@ function Booking() {
               <span className="inline-block border item-enhance rounded-full px-4 py-2 text-sm font-semibold text-gray-50 mr-2 mb-2">
                 {Reslocation}
               </span>
+              <span className="inline-block border item-enhance rounded-full px-4 py-2 text-sm font-semibold text-gray-50 mr-2 mb-2">
+                {menu}
+              </span>
             </div>
           </div>
         </div>
@@ -69,7 +89,7 @@ function Booking() {
             <h1 className="text-3xl font-bold mx-auto leading-tight md:text-2x tracking-tight md:text-2x text-white">
               Book a Table
             </h1>
-            <form className="w-full">
+            <form className="w-full" onSubmit={handleSubmit}>
               <div className="flex flex-col">
                 <label
                   htmlFor="date"
@@ -136,18 +156,12 @@ function Booking() {
               </div>
               <div>
                 <div className="flex justify-center">
-                  <button className="disable-number-input mx-auto text-xl reservebtn text-white rounded-lg font-normal px-5 py-2 mt-6">
+                  <button type="submit" className="disable-number-input mx-auto text-xl reservebtn text-white rounded-lg font-normal px-5 py-2 mt-6">
                     Reserve Now
                   </button>
-
-                </div>
-                <div className="flex justify-center">
-                  <Link to="/feedback" className="disable-number-input mx-auto text-xl reservebtn text-white rounded-lg font-normal px-5 py-2 mt-6">
-                    Feedback
-                  </Link>
-                  
-                </div>
-              </div>
+                  </div>
+                  </div>
+               
             </form>
           </div>
         </div>

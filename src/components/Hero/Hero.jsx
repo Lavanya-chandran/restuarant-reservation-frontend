@@ -14,6 +14,14 @@ function Hero() {
             className="text-2xl md:text-5xl md:font-bold pt-5 text-center my-2"
             // style={{ ...customFontStyle, lineHeight: "1.5" }}
           >
+        GOLDEN FORK
+          </h3>
+          </div>
+        <div className="flex glassmorphism heromid absolute z-1 w-[90%] md:w-[50%] flex-col rounded-xl align-center text-slate-100">
+          <h3
+            className="text-2xl md:text-5xl md:font-bold pt-5 text-center my-2"
+            // style={{ ...customFontStyle, lineHeight: "1.5" }}
+          >
             Let us Serve you better
           </h3>
 

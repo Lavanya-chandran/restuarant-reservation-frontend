@@ -7,6 +7,20 @@ let data_res = [
       price:"₹2,700 - ₹3,900",
       rating:4.2,
       location:"Asset No 2, New Delhi",
+      menu: [
+      {
+        "item": "Grilled Salmon",
+        "description": "Fresh Atlantic salmon grilled to perfection, served with lemon butter sauce.",
+        "price": "$18.99",
+        "img_src": "https://example.com/images/grilled_salmon.jpg"
+      },
+      {
+        "item": "Caesar Salad",
+        "description": "Crisp romaine lettuce, croutons, and Parmesan cheese tossed in Caesar dressing.",
+        "price": "$9.99",
+        "img_src": "https://example.com/images/caesar_salad.jpg"
+      }
+    ]
     },
     {
       id:2,
