@@ -55,8 +55,8 @@
 }
 
 .reservebtn:hover {
-  border-color: aqua;
-  color: aqua;
+  border-color:beige;
+  color: beige;
   transform: scale(1.05);
   transition: all 0.2s ease-in-out;
 }
@@ -72,8 +72,8 @@
 }
 
 .reservenowbtn:hover {
-  border-color: aqua;
-  color: aqua;
+  border-color:beige;
+  color: beige;
   transform: scale(1.05);
   transition: all 0.2s ease-in-out;
 }
@@ -92,17 +92,17 @@
 .forminput {
   outline: none !important;
   background-color: transparent;
-  color: aqua;
+  color:beige;
   transition: all 0.2s ease-in-out;
 }
 
 .forminput:focus {
-  border-color: aqua;
+  border-color: beige;
   scale: 1.05;
 }
 
 .item-enhance {
-  border-color: aqua;
+  border-color: beige;
 }
 
 .card-effect {
