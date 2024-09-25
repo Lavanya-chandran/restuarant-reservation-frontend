@@ -20,7 +20,16 @@ function Booking() {
       .post("https://restuarant-reservation-backend-z4g6.onrender.com/reserve/create")
       .then((res) => {
         if (res.status === 200) {
-          toast.success("Reservation successfully");
+          toast.success("Logged-in Successfully!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
           navigate("/reserve")
         }
     
