@@ -19,18 +19,8 @@ function Booking() {
     axios
       .post("https://restuarant-reservation-backend-z4g6.onrender.com/reserve/create")
       .then((res) => {
-        toast.success("Logged-in Successfully!", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-        });
         if (res.status === 200) {
-          console.log(formatdata);
+        alert("Reservation Conform");
          
           navigate("/reserve")
         }
