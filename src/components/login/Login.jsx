@@ -1,16 +1,9 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login(props) {
-  // const [email, setEmail] = useState("");
-  // const [password, setPasswword] = useState("");
-
-  // const arr = [email, password];
-
-  // const handleClick = () => {
-  //   props.getState(arr);
-  // };
+ const navigate=useNavigate();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -40,6 +33,7 @@ function Login(props) {
       progress: undefined,
       theme: "dark",
     });
+    navigate("/reserve")
   }
 
   return (
@@ -99,32 +93,12 @@ function Login(props) {
               />
             </div>
 
-            {/* <div className="flex items-start">
-              <div className="flex items-center h-5">
-                <input
-                  id="terms"
-                  aria-describedby="terms"
-                  type="checkbox"
-                  className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                  required
-                />
-              </div>
-              <div className="ml-3 text-sm">
-                <label
-                  htmlFor="terms"
-                  className="font-light text-gray-500 dark:text-gray-300"
-                >
-                  I accept the Terms and Conditions
-                </label>
-              </div>
-            </div> */}
-
             <Link to="/reserve"
               // onClick={handleClick}
               type="submit"
               className="reservebtn text-lg text-white font-medium rounded-lg px-5 py-2.5 mt-6 ml-12"
             >
-              Create Account
+              Login
             </Link>
             {/* <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                       Already have an account? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</a>
