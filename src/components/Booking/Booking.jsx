@@ -2,9 +2,10 @@ import React, { useState} from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
-import { useLocation,Link } from "react-router-dom";
+import { useLocation,Link, useNavigate } from "react-router-dom";
 
 function Booking() {
+  const navigate=useNavigate();
   const location = useLocation();
   const { image, Resname, description, rating, Reslocation, price,menu } =
     location.state;
