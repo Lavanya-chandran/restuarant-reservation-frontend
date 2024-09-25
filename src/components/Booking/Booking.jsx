@@ -165,6 +165,11 @@ function Booking() {
                   </div>
                
             </form>
+            <div className="flex justify-center">
+                  <Link  to="/feedback " type="submit" className="disable-number-input mx-auto text-xl reservebtn text-white rounded-lg font-normal px-5 py-2 mt-6">
+                    Reserve Now
+                  </Link>
+                  </div>
           </div>
         </div>
       </div>

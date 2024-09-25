@@ -10,7 +10,7 @@ import Reserve from "./components/Reserve/Reserve";
 import Booking from "./components/Booking/Booking";
 import Signup from "./components/Signup/Signup"
 import PrivateRoute from "./components/PrivateRoute";
-import Dashboard from './Dashboard/Dashboard';
+import Feedback from './Feedback/Feedback';
 import { useState } from "react";
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
                 <Booking />
                 </PrivateRoute>
               }/>
-                {/*<Route path="/dashboard" element={<Dashboard/>}/>*/}
+                <Route path="/feedback" element={<Feedback/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>

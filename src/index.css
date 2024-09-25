@@ -40,14 +40,25 @@
 }
 
 .glassmorphism {
-  background: rgba(255, 255, 255, 0);
+  background:rgba(255, 255, 255, 0);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-
+.star{
+  display: flex;
+  flex-direction: row;
+}
+.rating{
+  background:0 8px 32px 0 hsla(236, 32%, 29%, 0.799);
+  box-shadow: 0 8px 32px 0 hsla(236, 32%, 29%, 0.799);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
 .reservebtn {
   border: 1px solid #fff;
   padding: 2px 80px;
@@ -92,7 +103,7 @@
 .forminput {
   outline: none !important;
   background-color: transparent;
-  color:blue;
+  color:whitesmoke;
   transition: all 0.2s ease-in-out;
 }
 
@@ -102,7 +113,7 @@
 }
 
 .item-enhance {
-  border-color: beige;
+  border-color: #f5efef;
 }
 
 .card-effect {
