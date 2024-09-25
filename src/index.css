@@ -97,7 +97,7 @@
 }
 
 .forminput:focus {
-  border-color: brown;
+  border-color: #f5efef;
   scale: 1.05;
 }
 
