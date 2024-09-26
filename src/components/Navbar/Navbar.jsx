@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import logoGif from "../logo/nav.gif";
 import "../../App.css";
-import { FaRegCircleUser } from "react-icons/fa6";
 
 function Navbar() {
   return (
@@ -49,12 +47,6 @@ function Navbar() {
             className="block py-2 px-3 font-semibold text-md rounded bg-transparent md:bg-transparent"
           >
             Contact
-          </Link>
-          <Link
-            to="/dashboard"
-            className=" py-2 px-3 text-md rounded bg-transparent md:bg-transparent"
-          >
-          <FaRegCircleUser />
           </Link>
         </div>
       </div>
