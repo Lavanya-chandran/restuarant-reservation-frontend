@@ -57,18 +57,8 @@ const Item = (props) => {
             <span className="inline-block border item-enhance rounded-full px-4 py-2 text-sm font-semibold text-gray-50 mr-2 mb-2">
               {props.location}
             </span>
-            <span className="inline-block border item-enhance rounded-full px-4 py-2 text-sm font-semibold text-gray-50 mr-2 mb-2">
-              {props.menu}
-            </span>
-           
           </div>
         </div>
-        {/* <div classNameName='w-3/4'>
-      <Link t={`/product/${props.id}`}><img src={props.image} alt=''/></Link>
-      <p>{props.name}</p>
-      <p>{props.description}</p>
-      <p>{props.rating}</p>
-    </div> */}
       </NavLink>
     </>
   );

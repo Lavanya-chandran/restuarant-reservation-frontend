@@ -34,13 +34,15 @@ function App() {
               <Signup isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             }
           />
-          <Route
+                   <Route
             path="/booking"
             element={
               <PrivateRoute isLoggedIn={isLoggedIn}>
                 <Booking />
-                </PrivateRoute>
-              }/>
+              </PrivateRoute>
+            }
+          />
+
                 <Route path="/feedback" element={<Feedback/>}/>
         </Routes>
         <Footer />

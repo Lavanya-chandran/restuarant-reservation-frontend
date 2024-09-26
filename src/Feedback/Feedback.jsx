@@ -29,7 +29,7 @@ export function Feedback() {
       <div className="w-full rating rounded-lg md:mt-0 sm:max-w-md xl:p-0 ">
         <div className="flex flex-col p-6 sm:p-8">
           <h1 className="text-3xl font-bold mx-auto leading-tight tracking-tight md:text-2x text-white">
-            Create Account
+            Feedback Form
           </h1>
           <form className="mt-6" onSubmit={handleSubmit}>
             <div>

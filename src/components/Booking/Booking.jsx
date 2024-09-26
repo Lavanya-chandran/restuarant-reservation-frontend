@@ -7,8 +7,7 @@ import { useLocation,Link, useNavigate } from "react-router-dom";
 function Booking() {
   const navigate=useNavigate();
   const location = useLocation();
-  const { image, Resname, description, rating, Reslocation, price,menu } =
-    location.state;
+  const { image, Resname, description, rating, Reslocation, price,menu } =location.state;
 
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -79,9 +78,6 @@ function Booking() {
               </span>
               <span className="inline-block border item-enhance rounded-full px-4 py-2 text-sm font-semibold text-gray-50 mr-2 mb-2">
                 {Reslocation}
-              </span>
-              <span className="inline-block border item-enhance rounded-full px-4 py-2 text-sm font-semibold text-gray-50 mr-2 mb-2">
-                {menu}
               </span>
             </div>
           </div>
@@ -167,7 +163,7 @@ function Booking() {
             </form>
             <div className="flex justify-center">
                   <Link  to="/feedback " type="submit" className="disable-number-input mx-auto text-xl reservebtn text-white rounded-lg font-normal px-5 py-2 mt-6">
-                    Reserve Now
+                    Feedback
                   </Link>
                   </div>
           </div>
