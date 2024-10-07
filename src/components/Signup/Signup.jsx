@@ -30,7 +30,7 @@ function Signup({ isLoggedIn, setIsLoggedIn }) {
       .then((res) => {
         if (res.status === 200) {
           alert("Record added successfully");
-          navigate("/reserve")
+          navigate("/login")
         }
           // setIsLoggedIn(true);
         else {
@@ -118,7 +118,7 @@ function Signup({ isLoggedIn, setIsLoggedIn }) {
             </div> */}
             
             <button type="submit" className="reservebtn text-lg text-white font-medium rounded-lg px-5 py-2.5 mt-10 md:mt-4 mb-20 md:mb-8">
-              Log In
+              Signup
             </button>
 
         {/* <p className="text-sm font-light text-gray-500 dark:text-gray-400">

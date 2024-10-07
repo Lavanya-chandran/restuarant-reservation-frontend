@@ -30,12 +30,12 @@ function Navbar() {
           >
             About
           </Link>
-          <Link
-            to="/Signup"
+         {/* <Link
+            to="/"
             className="block py-2 px-3 font-semibold text-md rounded bg-transparent md:bg-transparent"
           >
-            Signup
-          </Link>
+            Hero
+          </Link>*/}
           <Link
             to="/reserve"
             className="block py-2 px-3 font-semibold text-md rounded bg-transparent md:bg-transparent"
