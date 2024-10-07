@@ -35,6 +35,12 @@ function App() {
               <Signup isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             }
           />
+           <Route
+            path="/login"
+            element={
+              <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            }
+          />
                    <Route
             path="/booking"
             element={
