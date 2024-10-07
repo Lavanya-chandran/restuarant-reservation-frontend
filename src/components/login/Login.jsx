@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Login(props) {
  const navigate=useNavigate();
@@ -21,8 +22,29 @@ function Login(props) {
 
   function submitHandler(event) {
     event.preventDefault();
-    console.log("printing the form values");
-    console.log(formData);
+    axios
+      .post("https://restuarant-reservation-backend-z4g6.onrender.com/people/login",)
+      .then((res) => {
+        if (res.status === 200) {
+          toast.success("Logged-in Successfully!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        
+          navigate("/reserve")
+        }
+          // setIsLoggedIn(true);
+        else {
+          Promise.reject();
+        }
+      })
+      .catch((err) => alert(err));
     toast.success("Logged-in Successfully!", {
       position: "top-right",
       autoClose: 5000,
@@ -34,8 +56,7 @@ function Login(props) {
       theme: "dark",
     });
     navigate("/reserve")
-  }
-
+  };
   return (
     <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 ">
       <img
@@ -93,13 +114,10 @@ function Login(props) {
               />
             </div>
 
-            <Link to="/reserve"
-              // onClick={handleClick}
-              type="submit"
-              className="reservebtn text-lg text-white font-medium rounded-lg px-5 py-2.5 mt-6 ml-12"
-            >
+            <button type="submit" className="reservebtn text-lg text-white font-medium rounded-lg px-5 py-2.5 mt-10 md:mt-4 mb-20 md:mb-8">
               Login
-            </Link>
+            </button>
+
             
           </form>
         </div>

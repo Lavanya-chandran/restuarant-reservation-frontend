@@ -29,7 +29,7 @@ function Signup({ isLoggedIn, setIsLoggedIn }) {
       .post("https://restuarant-reservation-backend-z4g6.onrender.com/people/create-people", data)
       .then((res) => {
         if (res.status === 200) {
-          alert("Record added successfully");
+          
           navigate("/login")
         }
           // setIsLoggedIn(true);
