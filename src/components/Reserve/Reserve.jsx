@@ -2,6 +2,7 @@ import Item from "../Item/Item";
 import data from "../Asset/data";
 import loadingGif from "../logo/loading.gif";
 import { Link } from "react-router-dom";
+import React from 'react';
 
 function Reserve({ isLoggedIn }) {
   return (

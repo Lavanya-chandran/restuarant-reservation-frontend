@@ -1,4 +1,5 @@
 import { Typography, Avatar, Rating } from "@material-tailwind/react";
+import React from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 export function Feedback() {

@@ -13,6 +13,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Feedback from './Feedback/Feedback';
 import { useState } from "react";
 import Login from './components/login/Login';
+import Dashboard from './components/dashboard/Dashboard';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -51,6 +52,7 @@ function App() {
           />
 
                 <Route path="/feedback" element={<Feedback/>}/>
+                <Route path="/dashboard" element={<Dashboard/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>
