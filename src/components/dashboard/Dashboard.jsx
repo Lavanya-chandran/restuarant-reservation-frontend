@@ -3,22 +3,19 @@ import axios from 'axios';
 
 function Dashboard() {
     const [users, setUsers] = useState([]);
-  let getData = async () => {
-    try {
-      const userResp = await axios.get("https://restuarant-reservation-backend-z4g6.onrender.com/review/reviews", {
-        headers: {
-          Authorization: window.localStorage.getItem("mytoken"),
-        },
-      });
-      setUsers(userResp.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
+    axios.get('https://restuarant-reservation-backend-z4g6.onrender.com/review/reviews')
+    .then(response => {
+      console.log('Response:', response.data);
+    })
+    .catch(error => {
+      if (error.response) {
+        console.error('Error status:', error.response.status);
+        console.error('Error data:', error.response.data); // Check if the server provides details about the error
+      } else {
+        console.error('Error message:', error.message);
+      }
+    });
+  
 
   let deleteUser = async (id) => {
     let yesno = confirm("Are you sure do you want to delete this user?");

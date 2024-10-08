@@ -15,7 +15,7 @@ function Signup({ isLoggedIn, setIsLoggedIn }) {
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
-        [event.target.name]: event.target.value,
+        [event.target.email]: event.target.value,
       };
     });
   }

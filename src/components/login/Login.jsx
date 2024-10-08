@@ -16,7 +16,7 @@ function Login(props) {
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
-        [event.target.name]: event.target.value,
+        [event.target.email]: event.target.value,
       };
     });
   }
@@ -34,7 +34,7 @@ function Login(props) {
           Promise.reject();
         }
       })
-      .catch((err) => alert(err));
+      .catch((err) => alert("user name &password is incorrect"));
   };
   return (
     <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 ">
