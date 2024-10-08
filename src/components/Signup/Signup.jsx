@@ -18,26 +18,24 @@ function Signup({ isLoggedIn, setIsLoggedIn }) {
       };
     });
   }
-
-  const handleSubmit = (event) => {
+  function handleSubmit(event) {
     event.preventDefault();
-    setIsLoggedIn(true);
-    const data = { email: formData.email, password: formData.password };
-    axios.post('https://restaurant-reservation-backend-z4g6.onrender.com/people/create-people', {
-      email: 'john@example.com',
-      phone: '1234567890'
-    }, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(response => {
-      console.log('Success:', response.data);
-    })
-    .catch(error => {
-      console.error('Error:', error.response ? error.response.data : error.message);
-    });
-  }
+    axios
+      .post("https://restuarant-reservation-backend-z4g6.onrender.com/people/create-people",)
+      .then((res) => {
+        if (res.status === 200) {
+          navigate("/login")
+        }
+          // setIsLoggedIn(true);
+        else {
+          Promise.reject();
+        }
+      })
+      .catch((err) => alert(err));
+    navigate("/login")
+  };
+
+  
   return (
     <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 ">
       <img
