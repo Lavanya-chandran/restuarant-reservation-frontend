@@ -26,7 +26,7 @@ function Signup({ isLoggedIn, setIsLoggedIn }) {
     setIsLoggedIn(true);
     const data = { email: formData.email, password: formData.password };
     axios
-      .post("https://restuarant-reservation-backend-z4g6.onrender.com/people/create-people", data)
+      .post("http://restuarant-reservation-backend-z4g6.onrender.com/people/create-people", data)
       .then((res) => {
         if (res.status === 200) {
           

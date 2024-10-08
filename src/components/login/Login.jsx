@@ -23,20 +23,9 @@ function Login(props) {
   function submitHandler(event) {
     event.preventDefault();
     axios
-      .post("https://restuarant-reservation-backend-z4g6.onrender.com/people/login",)
+      .post("http://restuarant-reservation-backend-z4g6.onrender.com/people/login",)
       .then((res) => {
         if (res.status === 200) {
-          toast.success("Logged-in Successfully!", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-        
           navigate("/reserve")
         }
           // setIsLoggedIn(true);
@@ -45,16 +34,6 @@ function Login(props) {
         }
       })
       .catch((err) => alert(err));
-    toast.success("Logged-in Successfully!", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
     navigate("/reserve")
   };
   return (
