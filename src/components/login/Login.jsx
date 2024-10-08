@@ -23,7 +23,7 @@ function Login(props) {
   function submitHandler(event) {
     event.preventDefault();
     axios
-      .post("http://restuarant-reservation-backend-z4g6.onrender.com/people/login",)
+      .post("https://restuarant-reservation-backend-z4g6.onrender.com/people/login",)
       .then((res) => {
         if (res.status === 200) {
           navigate("/reserve")

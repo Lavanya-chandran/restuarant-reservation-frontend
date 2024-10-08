@@ -3,8 +3,6 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 
-
-
 function Signup({ isLoggedIn, setIsLoggedIn }) {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -26,14 +24,12 @@ function Signup({ isLoggedIn, setIsLoggedIn }) {
     setIsLoggedIn(true);
     const data = { email: formData.email, password: formData.password };
     axios
-      .post("http://restuarant-reservation-backend-z4g6.onrender.com/people/create-people", data)
+      .post("https://restuarant-reservation-backend-z4g6.onrender.com/people/create-people", data)
       .then((res) => {
         if (res.status === 200) {
-          
+          alert("Record added successfully");
           navigate("/login")
-        }
-          // setIsLoggedIn(true);
-        else {
+        } else {
           Promise.reject();
         }
       })
