@@ -1,11 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import React from 'react';
 
-
-function Signup({ isLoggedIn, setIsLoggedIn }) {
-  const navigate = useNavigate();
+function Signup(props) {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -15,26 +13,26 @@ function Signup({ isLoggedIn, setIsLoggedIn }) {
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
-        [event.target.email]: event.target.value,
+        [event.target.name]: event.target.value,
       };
     });
   }
-  function handleSubmit(event) {
+
+  const handleSubmit = (event) => {
     event.preventDefault();
+    const data = { email: formData.email, password: formData.password };
     axios
-      .post("https://restuarant-reservation-backend-z4g6.onrender.com/people/create-people",)
+      .post("https://restuarant-reservation-backend-1.onrender.com/people/create-people",data)
       .then((res) => {
         if (res.status === 200) {
-          navigate("/login")
-        }
+          
           // setIsLoggedIn(true);
-        else {
-          Promise.reject();
         }
+        navigate("/login")
       })
-      .catch((err) => alert(err));
-    navigate("/login")
+      .catch((err) => alert("user already exists"));
   };
+
 
   
   return (
@@ -117,6 +115,9 @@ function Signup({ isLoggedIn, setIsLoggedIn }) {
             <button type="submit" className="reservebtn text-lg text-white font-medium rounded-lg px-5 py-2.5 mt-10 md:mt-4 mb-20 md:mb-8">
               Signup
             </button>
+            <div>
+            <span className="text-lg text-white">Already have an account?<Link to={'/login'} className="text-lg text-white"> Login</Link></span>
+            </div>
 
         {/* <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                       Already have an account? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</a>

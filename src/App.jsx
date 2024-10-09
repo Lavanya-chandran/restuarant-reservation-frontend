@@ -28,7 +28,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route
             path="/reserve"
-            element={<Reserve isLoggedIn={isLoggedIn} />}
+            element={<Reserve/>}
           />
           <Route
             path="/signup"

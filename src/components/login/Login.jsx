@@ -1,41 +1,39 @@
-import React from 'react';
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function Login(props) {
- const navigate=useNavigate();
-
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
-
-  function ChangeHandler(event) {
-    setFormData((prevFormData) => {
-      return {
-        ...prevFormData,
-        [event.target.email]: event.target.value,
-      };
+function Login( {isLoggedIn, setIsLoggedIn}) {
+   const navigate=useNavigate()
+  
+    const [formData, setFormData] = useState({
+      email: "",
+      password: "",
     });
-  }
-
-  function submitHandler(event) {
-    event.preventDefault();
-    axios
-      .post("https://restuarant-reservation-backend-z4g6.onrender.com/people/login",)
+  
+    function ChangeHandler(event) {
+      setFormData((prevFormData) => {
+        return {
+          ...prevFormData,
+          [event.target.name]: event.target.value,
+        };
+      });
+    }
+    const submitHandler = async (e) => {
+      e.preventDefault();
+      setIsLoggedIn(true);
+      const data = { email: formData.email, password: formData.password };
+      axios
+      .post("https://restuarant-reservation-backend-1.onrender.com/people/login",data)
       .then((res) => {
         if (res.status === 200) {
           navigate("/reserve")
-        }
           // setIsLoggedIn(true);
-        else {
-          Promise.reject();
         }
       })
-      .catch((err) => alert("user name &password is incorrect"));
+      .catch((err) => alert("username or password incorrect"));
   };
+
   return (
     <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 ">
       <img

@@ -15,22 +15,7 @@ function Reserve({ isLoggedIn }) {
       <h1 className="text-3xl md:text-5xl font-bold text-center my-20 md:my-6 text-slate-100">
         Select Your Delight!
       </h1>
-      {!isLoggedIn && (
-        <div className="mx-auto flex flex-col">
-          
-          <h1 className="mx-auto text-white font-bold text-2xl">
-            Haven't Logged In?
-          </h1>
-          <Link to="/Signup" className="mx-auto">
-            <button className="reservebtn text-lg text-white font-medium rounded-lg px-5 py-2.5 mt-10 md:mt-4 mb-20 md:mb-8">
-              Log In
-            </button>
-          </Link>
-        </div>
-      )}
-
-      {isLoggedIn && (
-        <div className="text-slate-100 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 font-bold gap-6 mx-16">
+      <div className="text-slate-100 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 font-bold gap-6 mx-16">
           {data.map((item, i) => {
             return (
               <Item
@@ -46,7 +31,6 @@ function Reserve({ isLoggedIn }) {
             );
           })}
         </div>
-      )}
     </div>
   );
 }

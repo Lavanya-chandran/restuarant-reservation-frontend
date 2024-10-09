@@ -31,18 +31,13 @@ function Navbar() {
           >
             About
           </Link>
-         {/* <Link
-            to="/"
-            className="block py-2 px-3 font-semibold text-md rounded bg-transparent md:bg-transparent"
-          >
-            Hero
-          </Link>*/}
           <Link
-            to="/reserve"
+            to="/dashboard"
             className="block py-2 px-3 font-semibold text-md rounded bg-transparent md:bg-transparent"
           >
-            Restaurants
+            Dashboard
           </Link>
+         
           <Link
             to="/contact"
             className="block py-2 px-3 font-semibold text-md rounded bg-transparent md:bg-transparent"
